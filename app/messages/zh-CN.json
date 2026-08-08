@@ -50,6 +50,7 @@
     "home": "首页",
     "dashboard": "治理控制台",
     "settings": "设置",
+    "knowledgeIngestions": "知识入库",
     "reference": "CRUD 参考",
     "richReference": "富能力参考",
     "mainNavigation": "管理端导航",
@@ -74,9 +75,6 @@
     "density_compact": "紧凑",
     "language": "语言",
     "fullscreen": "切换全屏"
-  },
-  "Navigation": {
-    "knowledgeIngestions": "知识入库"
   },
   "KnowledgeIngestions": {
     "title": "知识入库",

@@ -50,6 +50,7 @@
     "home": "Home",
     "dashboard": "Governance console",
     "settings": "Settings",
+    "knowledgeIngestions": "Knowledge ingestions",
     "reference": "CRUD reference",
     "richReference": "Rich capability reference",
     "mainNavigation": "Administration navigation",
@@ -74,9 +75,6 @@
     "density_compact": "Compact",
     "language": "Language",
     "fullscreen": "Toggle fullscreen"
-  },
-  "Navigation": {
-    "knowledgeIngestions": "Knowledge ingestions"
   },
   "KnowledgeIngestions": {
     "title": "Knowledge ingestions",
