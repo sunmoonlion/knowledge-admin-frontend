@@ -10,5 +10,13 @@ describe('admin navigation', () => {
     )
     expect(filterNavigationByRoles(['admin']).map((item) => item.key)).toContain('rich-reference')
     expect(findNavigationItem('/zh-CN/reference/details')?.key).toBe('reference')
+    // 数据集登记只给 knowledge 管理员
+    expect(filterNavigationByRoles(['admin']).map((item) => item.key)).toContain(
+      'knowledge-datasets',
+    )
+    expect(filterNavigationByRoles(['operator']).map((item) => item.key)).not.toContain(
+      'knowledge-datasets',
+    )
+    expect(findNavigationItem('/zh-CN/knowledge/datasets')?.key).toBe('knowledge-datasets')
   })
 })

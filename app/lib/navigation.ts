@@ -1,5 +1,6 @@
 import {
   ChartNoAxesCombined,
+  Database,
   Gauge,
   BookOpen,
   Settings,
@@ -10,7 +11,13 @@ import {
 export type AdminNavigationItem = {
   key: string
   path: string
-  labelKey: 'dashboard' | 'reference' | 'richReference' | 'settings' | 'knowledgeIngestions'
+  labelKey:
+    | 'dashboard'
+    | 'reference'
+    | 'richReference'
+    | 'settings'
+    | 'knowledgeIngestions'
+    | 'knowledgeDatasets'
   icon: LucideIcon
   requiredRoles?: readonly string[]
   pinned?: boolean
@@ -25,13 +32,21 @@ export const adminNavigation: readonly AdminNavigationItem[] = [
     pinned: true,
   },
 
-{
-  key: 'knowledge-ingestions',
-  path: '/knowledge/ingestions',
-  labelKey: 'knowledgeIngestions',
-  icon: BookOpen,
-  requiredRoles: ['admin', 'operator'],
-},
+  {
+    key: 'knowledge-ingestions',
+    path: '/knowledge/ingestions',
+    labelKey: 'knowledgeIngestions',
+    icon: BookOpen,
+    requiredRoles: ['admin', 'operator'],
+  },
+  // 数据集登记（PRD/apps/knowledge.md 3.3）。只读，只给 knowledge 管理员
+  {
+    key: 'knowledge-datasets',
+    path: '/knowledge/datasets',
+    labelKey: 'knowledgeDatasets',
+    icon: Database,
+    requiredRoles: ['admin'],
+  },
   {
     key: 'reference',
     path: '/reference',

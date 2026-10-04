@@ -1,0 +1,50 @@
+{
+ "id": "full",
+ "title": "管理端：登记表",
+ "description": "上海机场登记过两个版本（旧的被取代），贵州茅台（样例）一个。",
+ "signed_in": true,
+ "user": {
+  "display_name": "样例用户"
+ },
+ "pages": [
+  {
+   "title": "数据集登记",
+   "path": "/zh-CN/knowledge/datasets"
+  }
+ ],
+ "responses": [
+  {
+   "method": "GET",
+   "path": "/api/admin/v1/knowledge/datasets",
+   "query": "",
+   "status": 200,
+   "content_type": "application/json",
+   "file": "0001.json"
+  },
+  {
+   "method": "GET",
+   "path": "/api/admin/v1/knowledge/datasets/sh600009-financials/versions",
+   "query": "",
+   "status": 200,
+   "content_type": "application/json",
+   "file": "0002.json"
+  },
+  {
+   "method": "GET",
+   "path": "/api/admin/v1/knowledge/datasets/sh600519-financials/versions",
+   "query": "",
+   "status": 200,
+   "content_type": "application/json",
+   "file": "0003.json"
+  },
+  {
+   "method": "GET",
+   "path": "/api/admin/v1/knowledge/datasets/sh000001-financials/versions",
+   "query": "",
+   "status": 404,
+   "content_type": "application/json",
+   "file": "0004.json"
+  }
+ ],
+ "streams": []
+}

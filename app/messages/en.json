@@ -61,7 +61,8 @@
     "expandMenu": "Expand navigation",
     "closeTab": "Close {name}",
     "governance": "Administration capability migration",
-    "governanceDescription": "P0-007E will add navigation, authorization, CRUD, audit and shared tooling on this foundation."
+    "governanceDescription": "P0-007E will add navigation, authorization, CRUD, audit and shared tooling on this foundation.",
+    "knowledgeDatasets": "Dataset registry"
   },
   "settings": {
     "title": "Interface settings",
@@ -79,5 +80,31 @@
   "KnowledgeIngestions": {
     "title": "Knowledge ingestions",
     "description": "Knowledge Admin Dataset/Ingestion control surface (minimal shell)"
+  },
+  "registry": {
+    "title": "Dataset registry",
+    "lead": "Registered datasets: current version, file, location, and each dataset's version history.",
+    "readOnly": "Read-only. info registers datasets; to go back to an older version, use “register again” on info's intake page.",
+    "loading": "Loading…",
+    "failed": "Could not load. Try again later.",
+    "off": "The dataset registry is off (KNOWLEDGE_DATASET_REGISTRY_ENABLED), so it is empty. Experts and agents can only query the default dataset.",
+    "none": "No dataset has been registered yet.",
+    "dataset": "Dataset",
+    "currentVersion": "Current version",
+    "noCurrent": "No current version",
+    "version": "Version",
+    "status": "Status",
+    "current": "Current",
+    "superseded": "Superseded",
+    "registeredAt": "Registered",
+    "period": "Period",
+    "periodValue": "{from} to {to}",
+    "file": "File",
+    "hash": "sha256 {hash}…",
+    "local": "Local copy",
+    "fetched": "Fetched and verified",
+    "notFetched": "Not fetched yet (fetched on first query)",
+    "history": "Versions ({count})",
+    "historyOf": "Versions of {title}"
   }
 }

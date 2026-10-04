@@ -1,0 +1,57 @@
+{
+ "enabled": true,
+ "datasets": [
+  {
+   "dataset_id": "sh600009-financials",
+   "title": "上海机场 财务报表",
+   "security_code": "600009",
+   "current": {
+    "dataset_id": "sh600009-financials",
+    "data_version": "sh600009-financials-9fd91db79529e208",
+    "title": "上海机场 财务报表",
+    "security_code": "600009",
+    "status": "active",
+    "start_date": "1994-12-31",
+    "end_date": "2026-06-30",
+    "sha256": "ac5cfd0805d0c7f99be5054c49d9aaf00e3e3f400d27884fe32e44e74fdbac23",
+    "size_bytes": 151552,
+    "bucket": "development-info-originals",
+    "object_key": "info/securities/code=600009/datasets/sh600009-financials-9fd91db79529e208/sh600009-financials.sqlite",
+    "object_version_id": null,
+    "source_app": "info",
+    "source_ref": "ingestion-1",
+    "registered_by": "service:info-backend",
+    "registered_at": "2026-09-30T02:30:00Z",
+    "superseded_at": null,
+    "fetched": true
+   },
+   "version_count": 2
+  },
+  {
+   "dataset_id": "sh600519-financials",
+   "title": "贵州茅台 财务报表（样例）",
+   "security_code": "600519",
+   "current": {
+    "dataset_id": "sh600519-financials",
+    "data_version": "sh600519-financials-0000000000000001",
+    "title": "贵州茅台 财务报表（样例）",
+    "security_code": "600519",
+    "status": "active",
+    "start_date": "2001-12-31",
+    "end_date": "2026-06-30",
+    "sha256": "672dd692c3c21f0e7fd85e8354405203cb0cff1add2041014209582224463d83",
+    "size_bytes": 24576,
+    "bucket": "development-info-originals",
+    "object_key": "info/securities/code=600519/datasets/sh600519-financials-0000000000000001/sh600519-financials.sqlite",
+    "object_version_id": null,
+    "source_app": "info",
+    "source_ref": "ingestion-1",
+    "registered_by": "service:info-backend",
+    "registered_at": "2026-09-28T02:30:00Z",
+    "superseded_at": null,
+    "fetched": false
+   },
+   "version_count": 1
+  }
+ ]
+}

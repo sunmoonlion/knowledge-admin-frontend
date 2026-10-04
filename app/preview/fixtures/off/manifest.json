@@ -1,0 +1,26 @@
+{
+ "id": "off",
+ "title": "管理端：多数据集没有打开",
+ "description": "登记表是空的，页面说明原因。",
+ "signed_in": true,
+ "user": {
+  "display_name": "样例用户"
+ },
+ "pages": [
+  {
+   "title": "数据集登记",
+   "path": "/zh-CN/knowledge/datasets"
+  }
+ ],
+ "responses": [
+  {
+   "method": "GET",
+   "path": "/api/admin/v1/knowledge/datasets",
+   "query": "",
+   "status": 200,
+   "content_type": "application/json",
+   "file": "0001.json"
+  }
+ ],
+ "streams": []
+}

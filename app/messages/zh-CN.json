@@ -61,7 +61,8 @@
     "expandMenu": "展开导航",
     "closeTab": "关闭{name}",
     "governance": "管理能力迁移中枢",
-    "governanceDescription": "P0-007E 将在此基础上逐项迁入菜单、权限、CRUD、审计和通用工具能力。"
+    "governanceDescription": "P0-007E 将在此基础上逐项迁入菜单、权限、CRUD、审计和通用工具能力。",
+    "knowledgeDatasets": "数据集登记"
   },
   "settings": {
     "title": "界面设置",
@@ -79,5 +80,31 @@
   "KnowledgeIngestions": {
     "title": "知识入库",
     "description": "Knowledge Admin Dataset/Ingestion 控制台（最小域壳）"
+  },
+  "registry": {
+    "title": "数据集登记",
+    "lead": "登记进来的数据集：现行版本、文件、存放位置，和每个数据集的版本历史。",
+    "readOnly": "这里只读。登记由 info 发起；要回到旧版本，在 info 的证券采集页「重新登记」。",
+    "loading": "加载中…",
+    "failed": "没有取到，请稍后再试。",
+    "off": "多数据集没有打开（KNOWLEDGE_DATASET_REGISTRY_ENABLED），登记表是空的。专家和代理现在只查得到默认数据集。",
+    "none": "还没有数据集登记进来。",
+    "dataset": "数据集",
+    "currentVersion": "现行版本",
+    "noCurrent": "没有现行版本",
+    "version": "版本",
+    "status": "状态",
+    "current": "现行",
+    "superseded": "被取代",
+    "registeredAt": "登记时间",
+    "period": "数据范围",
+    "periodValue": "{from} 至 {to}",
+    "file": "文件",
+    "hash": "校验值 {hash}…",
+    "local": "本地",
+    "fetched": "已取回，校验过",
+    "notFetched": "还没取回（第一次查到它时取）",
+    "history": "版本历史（{count}）",
+    "historyOf": "{title}的版本"
   }
 }
