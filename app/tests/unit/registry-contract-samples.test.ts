@@ -21,8 +21,11 @@ function sampled(scenario: string) {
 }
 const LIST = '/api/admin/v1/knowledge/datasets'
 
+// 登记表的情景；目录的情景（catalog…）由 catalog-contract-samples 检查
+const scenarios = readdirSync(fixtures).filter((name) => !name.startsWith('catalog'))
+
 describe('契约认得样例里的每一份返回', () => {
-  it.each(readdirSync(fixtures))('情景 %s', (scenario) => {
+  it.each(scenarios)('情景 %s', (scenario) => {
     const ok = sampled(scenario).filter((each) => each.status === 200)
     expect(ok.length).toBeGreaterThan(0)
     for (const each of ok) {
