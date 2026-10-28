@@ -1,7 +1,5 @@
 import {
   ChartNoAxesCombined,
-  Database,
-  FolderOpen,
   Gauge,
   BookOpen,
   Settings,
@@ -12,14 +10,7 @@ import {
 export type AdminNavigationItem = {
   key: string
   path: string
-  labelKey:
-    | 'dashboard'
-    | 'reference'
-    | 'richReference'
-    | 'settings'
-    | 'knowledgeIngestions'
-    | 'knowledgeCatalog'
-    | 'knowledgeDatasets'
+  labelKey: 'dashboard' | 'reference' | 'richReference' | 'settings' | 'knowledgeIngestions'
   icon: LucideIcon
   requiredRoles?: readonly string[]
   pinned?: boolean
@@ -40,22 +31,6 @@ export const adminNavigation: readonly AdminNavigationItem[] = [
     labelKey: 'knowledgeIngestions',
     icon: BookOpen,
     requiredRoles: ['admin', 'operator'],
-  },
-  // 数据目录（账 56 起只在管理端）：公共库里有什么。只读，只给 knowbase 管理员
-  {
-    key: 'knowledge-catalog',
-    path: '/knowledge/catalog',
-    labelKey: 'knowledgeCatalog',
-    icon: FolderOpen,
-    requiredRoles: ['admin'],
-  },
-  // 数据集登记（PRD/apps/knowledge.md 3.3）。只读，只给 knowbase 管理员
-  {
-    key: 'knowbase-datasets',
-    path: '/knowledge/datasets',
-    labelKey: 'knowledgeDatasets',
-    icon: Database,
-    requiredRoles: ['admin'],
   },
   {
     key: 'reference',

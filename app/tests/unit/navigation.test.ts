@@ -10,24 +10,14 @@ describe('admin navigation', () => {
     )
     expect(filterNavigationByRoles(['admin']).map((item) => item.key)).toContain('rich-reference')
     expect(findNavigationItem('/zh-CN/reference/details')?.key).toBe('reference')
-    // 数据集登记只给 knowbase 管理员
-    expect(filterNavigationByRoles(['admin']).map((item) => item.key)).toContain(
+    // 旧 SQLite 数据集的数据目录与登记两页已删（decisions ⑰）
+    expect(filterNavigationByRoles(['admin']).map((item) => item.key)).not.toContain(
+      'knowledge-catalog',
+    )
+    expect(filterNavigationByRoles(['admin']).map((item) => item.key)).not.toContain(
       'knowbase-datasets',
     )
-    expect(filterNavigationByRoles(['operator']).map((item) => item.key)).not.toContain(
-      'knowbase-datasets',
-    )
-    expect(findNavigationItem('/zh-CN/knowledge/datasets')?.key).toBe('knowbase-datasets')
-    // 数据目录也只给 knowbase 管理员（账 56）；数据集页算在目录这一项下
-    expect(filterNavigationByRoles(['admin']).map((item) => item.key)).toContain(
-      'knowledge-catalog',
-    )
-    expect(filterNavigationByRoles(['operator']).map((item) => item.key)).not.toContain(
-      'knowledge-catalog',
-    )
-    expect(findNavigationItem('/zh-CN/knowledge/catalog')?.key).toBe('knowledge-catalog')
-    expect(findNavigationItem('/zh-CN/knowledge/catalog/sh600009-financials')?.key).toBe(
-      'knowledge-catalog',
-    )
+    expect(findNavigationItem('/zh-CN/knowledge/catalog')).toBeUndefined()
+    expect(findNavigationItem('/zh-CN/knowledge/datasets')).toBeUndefined()
   })
 })
