@@ -61,7 +61,10 @@
     "expandMenu": "Expand navigation",
     "closeTab": "Close {name}",
     "governance": "Administration capability migration",
-    "governanceDescription": "P0-007E will add navigation, authorization, CRUD, audit and shared tooling on this foundation."
+    "governanceDescription": "P0-007E will add navigation, authorization, CRUD, audit and shared tooling on this foundation.",
+    "userDataUsage": "User data usage",
+    "userDataVocabulary": "Vocabulary",
+    "userDataMaterials": "Disabled material"
   },
   "settings": {
     "title": "Interface settings",
@@ -79,5 +82,77 @@
   "KnowledgeIngestions": {
     "title": "Knowledge ingestions",
     "description": "Knowbase Admin Dataset/Ingestion control surface (minimal shell)"
+  },
+  "userData": {
+    "usage": {
+      "title": "User data usage",
+      "lead": "Space used by each user (1 GB each), largest first; public originals count for nobody.",
+      "loading": "Loading…",
+      "failed": "Could not load usage.",
+      "empty": "No user data yet.",
+      "subject": "User",
+      "materials": "Materials",
+      "used": "Used",
+      "share": "Share of {quota}"
+    },
+    "vocabulary": {
+      "title": "Vocabulary",
+      "lead": "The shared vocabulary for describing material (SDD 0049). It lives in code and carries a version.",
+      "loading": "Loading…",
+      "failed": "Could not load the vocabulary.",
+      "current": "Current vocabulary v{version}",
+      "rule": "Adding types or values keeps the version; renaming, deleting or changing meaning bumps it, regenerates the contract, and old descriptions need reconfirming. Change it through a code commit, not here.",
+      "distribution": "Descriptions",
+      "versionCurrent": "v{version} (current): {total}",
+      "versionOld": "v{version} (old, not resolvable): {total}",
+      "type": "Type",
+      "status": "Status",
+      "count": "Count",
+      "noType": "No type",
+      "statusName": {
+        "unconfirmed": "To confirm",
+        "confirmed": "Confirmed by owner",
+        "checked": "Checked on intake"
+      },
+      "types": "Types",
+      "topics": "Topics",
+      "industries": "Industries"
+    },
+    "materials": {
+      "title": "Disabled material",
+      "lead": "Find material, disable it (violations) or purge it lawfully. Each step records a reason and a deletion event.",
+      "owner": "Owner",
+      "materialId": "Material id",
+      "disabledOnly": "Disabled only",
+      "search": "Find",
+      "needFilter": "Give an owner, an id, or tick “Disabled only”.",
+      "loading": "Loading…",
+      "failed": "Could not load.",
+      "none": "Nothing matches.",
+      "disabledAt": "disabled {at}",
+      "deleted": "deleted by owner",
+      "events": "Deletion events",
+      "noEvents": "None yet.",
+      "action": {
+        "relation": "Relation removed",
+        "disable": "Disabled",
+        "purge": "Purged"
+      },
+      "state": {
+        "processing": "processing",
+        "done": "done"
+      },
+      "pending": "waiting for: {list}",
+      "reason": "Reason (required, up to 80 characters)",
+      "disable": "Disable",
+      "disableConfirm": "Disabling stops all new reads and revokes running grants. Continue?",
+      "personalInfo": "Content is personal information that must be deleted",
+      "purge": "Purge",
+      "purgeConfirm": "Purging deletes originals and readings (if others still lawfully use it and it is not personal information, only the owner relation is removed). Continue?",
+      "purged": "Content purged.",
+      "relationOnly": "Others still use it lawfully; only the owner relation was removed.",
+      "actionFailed": "That did not work; please retry.",
+      "adminOnly": "Only admins can disable or purge."
+    }
   }
 }

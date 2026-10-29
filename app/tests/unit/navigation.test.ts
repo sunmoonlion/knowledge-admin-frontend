@@ -19,5 +19,10 @@ describe('admin navigation', () => {
     )
     expect(findNavigationItem('/zh-CN/knowledge/catalog')).toBeUndefined()
     expect(findNavigationItem('/zh-CN/knowledge/datasets')).toBeUndefined()
+    // 用户资料的三页（SDD 0044 第四节）：admin、operator 都看得到
+    expect(filterNavigationByRoles(['operator']).map((item) => item.key)).toEqual(
+      expect.arrayContaining(['user-data-usage', 'user-data-vocabulary', 'user-data-materials']),
+    )
+    expect(findNavigationItem('/zh-CN/user-data/materials')?.key).toBe('user-data-materials')
   })
 })

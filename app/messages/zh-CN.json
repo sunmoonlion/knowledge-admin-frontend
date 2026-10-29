@@ -61,7 +61,10 @@
     "expandMenu": "展开导航",
     "closeTab": "关闭{name}",
     "governance": "管理能力迁移中枢",
-    "governanceDescription": "P0-007E 将在此基础上逐项迁入菜单、权限、CRUD、审计和通用工具能力。"
+    "governanceDescription": "P0-007E 将在此基础上逐项迁入菜单、权限、CRUD、审计和通用工具能力。",
+    "userDataUsage": "用户资料用量",
+    "userDataVocabulary": "词表",
+    "userDataMaterials": "禁用资料的处理"
   },
   "settings": {
     "title": "界面设置",
@@ -79,5 +82,77 @@
   "KnowledgeIngestions": {
     "title": "知识入库",
     "description": "Knowbase Admin Dataset/Ingestion 控制台（最小域壳）"
+  },
+  "userData": {
+    "usage": {
+      "title": "用户资料用量",
+      "lead": "各用户名下资料占的空间（每人 1 GB），多的在前；公开原件不算谁的空间。",
+      "loading": "加载中…",
+      "failed": "没取到用量。",
+      "empty": "还没有用户资料。",
+      "subject": "用户",
+      "materials": "资料份数",
+      "used": "已用",
+      "share": "占 {quota} 的比例"
+    },
+    "vocabulary": {
+      "title": "词表",
+      "lead": "描述资料用的统一词表（SDD 0049）。词表在代码里，带版本号。",
+      "loading": "加载中…",
+      "failed": "没取到词表。",
+      "current": "现行词表第 {version} 版",
+      "rule": "只加细类、加取值不升版本；改名、删除、改词义才升，升了要重新生成契约，旧描述要用户重新确认。改词表走代码提交，不在这里改。",
+      "distribution": "描述的分布",
+      "versionCurrent": "第 {version} 版（现行）：{total} 份",
+      "versionOld": "第 {version} 版（旧，不参与解析）：{total} 份",
+      "type": "细类",
+      "status": "确认状态",
+      "count": "份数",
+      "noType": "未填类型",
+      "statusName": {
+        "unconfirmed": "待确认",
+        "confirmed": "本人确认过",
+        "checked": "入库质检过"
+      },
+      "types": "类型枚举",
+      "topics": "事项",
+      "industries": "行业"
+    },
+    "materials": {
+      "title": "禁用资料的处理",
+      "lead": "找资料、禁用（违规处置）、依法清除。每一步写明原因，留删除事件。",
+      "owner": "所有者",
+      "materialId": "资料编号",
+      "disabledOnly": "只看禁用了的",
+      "search": "找",
+      "needFilter": "填所有者、编号，或勾「只看禁用了的」。",
+      "loading": "加载中…",
+      "failed": "没取到。",
+      "none": "没有对得上的资料。",
+      "disabledAt": "{at} 禁用",
+      "deleted": "所有者删了",
+      "events": "删除事件",
+      "noEvents": "还没有。",
+      "action": {
+        "relation": "撤关系",
+        "disable": "禁用",
+        "purge": "清除"
+      },
+      "state": {
+        "processing": "处理中",
+        "done": "已完成"
+      },
+      "pending": "等回执：{list}",
+      "reason": "原因（必填，最多 80 字）",
+      "disable": "禁用",
+      "disableConfirm": "禁用后一切新读取停止，在跑的授权也撤。确定？",
+      "personalInfo": "内容是必须删的个人信息",
+      "purge": "依法清除",
+      "purgeConfirm": "清除会删原件与读法（别人还合法用着、又不是必须删的个人信息时只撤所有者的关系）。确定？",
+      "purged": "已清除内容。",
+      "relationOnly": "别人还合法用着，只撤了所有者的关系，内容没删。",
+      "actionFailed": "没成，请重试。",
+      "adminOnly": "禁用、清除只有 admin 能做。"
+    }
   }
 }
